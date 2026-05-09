@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー｜麻雀成績集計</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1208;
+  --paper: #f5f0e8;
+  --cream: #faf7f0;
+  --gold: #b8860b;
+  --teal: #2c7873;
+  --red: #c0392b;
+  --sh: rgba(26,18,8,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Serif JP', serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.9;
+  font-size: 15px;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(26,18,8,0.04) 39px, rgba(26,18,8,0.04) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(26,18,8,0.02) 39px, rgba(26,18,8,0.02) 40px);
+  pointer-events: none; z-index: 0;
+}
+.wrap {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.page-header {
+  text-align: center;
+  padding-bottom: 28px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 40px;
+}
+.page-header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: var(--ink);
+  margin-top: 4px;
+}
+.app-name {
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.page-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
+}
+.page-date {
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.1em;
+}
+.section {
+  background: var(--cream);
+  border: 1px solid rgba(26,18,8,0.14);
+  border-radius: 2px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 0 var(--sh);
+}
+.section-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(26,18,8,0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+.section p {
+  font-size: 0.88rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.section p:last-child { margin-bottom: 0; }
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+.section ul li {
+  font-size: 0.88rem;
+  color: #333;
+  padding: 6px 0 6px 18px;
+  border-bottom: 1px solid rgba(26,18,8,0.06);
+  position: relative;
+}
+.section ul li:last-child { border-bottom: none; }
+.section ul li::before {
+  content: '・';
+  position: absolute; left: 0;
+  color: var(--gold);
+}
+.highlight {
+  background: rgba(44,120,115,0.07);
+  border-left: 3px solid var(--teal);
+  padding: 12px 16px;
+  border-radius: 0 2px 2px 0;
+  margin: 12px 0;
+  font-size: 0.85rem;
+  color: var(--teal);
+  font-weight: 500;
+}
+.warning {
+  background: rgba(192,57,43,0.06);
+  border-left: 3px solid var(--red);
+  padding: 12px 16px;
+  border-radius: 0 2px 2px 0;
+  margin: 12px 0;
+  font-size: 0.85rem;
+  color: var(--red);
+}
+.contact-box {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 2px;
+  padding: 20px 24px;
+  margin-top: 8px;
+}
+.contact-box p {
+  font-size: 0.85rem;
+  color: rgba(245,240,232,0.8) !important;
+  margin-bottom: 8px;
+}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(26,18,8,0.12);
+  font-size: 0.72rem;
+  color: #bbb;
+  letter-spacing: 0.1em;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="page-header">
+    <div class="app-name">🀄 麻雀成績集計</div>
+    <div class="page-title">プライバシーポリシー</div>
+    <div class="page-date">制定日：2026年3月8日｜最終改定日：2026年5月3日</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">はじめに</div>
+    <p>「麻雀成績集計」（以下「本アプリ」）は、フリー雀荘での麻雀成績・収支を記録・管理するためのアプリケーションです。</p>
+    <p>本アプリの開発者であるRyota（以下「当方」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限努めます。本プライバシーポリシー（以下「本ポリシー」）は、本アプリにおける情報の取り扱いについて定めるものです。</p>
+    <p>本アプリをダウンロード、インストール、または利用された場合、ユーザーは本ポリシーの内容に同意したものとみなされます。本ポリシーに同意いただけない場合は、本アプリの利用をお控えください。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">定義</div>
+    <p>本ポリシーにおいて、以下の用語は次の意味で使用します。</p>
+    <ul>
+      <li>「個人情報」とは、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別できるもの（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものを含む）をいいます</li>
+      <li>「ユーザー」とは、本アプリを利用するすべての方をいいます</li>
+      <li>「端末」とは、ユーザーが本アプリをインストールしたスマートフォン、タブレットその他の機器をいいます</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">適用範囲</div>
+    <p>本ポリシーは、本アプリのすべてのプラットフォーム版（iOS版およびAndroid版を含みますが、これらに限りません）に適用されます。</p>
+    <p>本アプリ内に外部サービスへのリンクが含まれる場合、リンク先におけるプライバシーの取り扱いは当該外部サービスのプライバシーポリシーに従うものとし、当方はリンク先の内容およびプライバシーの取り扱いについて一切の責任を負いません。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">収集する情報について</div>
+    <p>本アプリで入力・記録されるゲームデータおよび収支データはすべてユーザーの端末内にのみ保存され、当方が管理するサーバーその他の外部サーバーへの送信は一切行いません。</p>
+    <p>当方が直接収集しない情報として、以下を明示します。</p>
+    <ul>
+      <li>氏名、メールアドレス、電話番号、住所その他の連絡先情報</li>
+      <li>位置情報（GPS、Wi-Fi、Bluetooth等を利用した位置特定を含む）</li>
+      <li>写真、連絡先、カレンダーその他の端末内データへのアクセス</li>
+      <li>クレジットカード番号その他の決済情報</li>
+      <li>健康情報、生体認証データ</li>
+    </ul>
+    <p>ただし、本アプリはGoogle AdMobを利用した広告を表示しており、AdMobによって広告配信目的で以下の情報が収集される場合があります。</p>
+    <ul>
+      <li>端末の識別情報（IDFA等の広告識別子）</li>
+      <li>広告のインプレッション・クリック等の広告インタラクションデータ</li>
+      <li>おおよその位置情報（IPアドレスに基づくもの）</li>
+    </ul>
+    <p>iOS版では、これらのデータ収集に先立ち、App Tracking Transparency（ATT）フレームワークに基づくユーザーの許可を求めます。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">データの保存と管理について</div>
+    <p>本アプリで入力されたすべてのデータは、ユーザーの端末内（ローカルストレージ）にのみ保存されます。当方がユーザーのデータにアクセスすることはできません。</p>
+    <ul>
+      <li>データは端末の外部に送信、転送、共有されることはありません</li>
+      <li>iCloud、Googleアカウントその他のクラウドサービスへの自動同期は行いません</li>
+      <li>ユーザーはいつでもアプリ内の機能からデータを削除できます</li>
+      <li>アプリをアンインストール（削除）すると、保存されたすべてのデータが端末から完全に削除されます</li>
+      <li>機種変更または端末の初期化を行う際は、事前にアプリ内のエクスポート機能を利用してデータをバックアップしてください</li>
+    </ul>
+    <div class="warning">
+      ⚠️ アンインストール、端末の初期化、またはアプリデータの消去により失われたデータの復元は、技術的に不可能であり、当方では対応いたしかねます。定期的なエクスポートによるバックアップを強くお勧めします。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">第三者への情報提供</div>
+    <p>当方は、以下の場合を除き、ユーザーに関する情報を第三者に提供、開示、または共有しません。</p>
+    <ul>
+      <li>法令に基づき開示が義務付けられた場合</li>
+      <li>人の生命、身体または財産の保護のために必要がある場合であって、ユーザーの同意を得ることが困難であるとき</li>
+      <li>ユーザーご本人から事前に明示的な同意を得た場合</li>
+    </ul>
+    <div class="highlight">当方はユーザーの個人情報を第三者に販売・提供しません。ただし、広告配信のためGoogle AdMobが広告識別子等を収集・利用する場合があります。詳細はAdMobのプライバシーポリシーをご確認ください。</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">広告・解析ツールについて</div>
+    <div class="highlight">本アプリはGoogle AdMob（Google LLC）を使用して広告を表示しています。</div>
+    <p>Google AdMobは、ユーザーの興味・関心に基づいたパーソナライズ広告を配信するため、以下の情報を収集・利用することがあります。</p>
+    <ul>
+      <li>端末の広告識別子（iOS: IDFA、Android: Advertising ID）</li>
+      <li>広告のインプレッション・クリック等のインタラクションデータ</li>
+      <li>IPアドレスに基づくおおよその位置情報</li>
+    </ul>
+    <p>iOS版では、App Tracking Transparency（ATT）フレームワークに基づき、アプリ起動時にトラッキングの許可をお求めします。許可しない場合も本アプリをご利用いただけますが、パーソナライズされていない広告が表示されます。</p>
+    <p>AdMobのプライバシーポリシーおよびデータの取り扱いについては、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Googleのプライバシーポリシー</a>をご確認ください。</p>
+    <p>なお、以下のサービスおよび技術は使用していません。</p>
+    <ul>
+      <li>Google Analytics、Firebase Analytics その他のアクセス解析サービス</li>
+      <li>Meta Audience Network その他のAdMob以外の広告配信サービス</li>
+      <li>Cookie、ウェブビーコン、ピクセルタグその他のウェブトラッキング技術</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Appleのプライバシー要件への準拠（iOS版）</div>
+    <p>iOS版の本アプリは、Apple Inc.が定めるApp Store Reviewガイドラインおよびプライバシー要件（Guideline 5.1.2）に準拠しています。</p>
+    <ul>
+      <li>App Storeの「Appのプライバシー」情報において、広告目的でのDevice ID（IDFA）および広告データの収集を申告しています</li>
+      <li>アプリ起動時にATT（App Tracking Transparency）の許可ダイアログを表示し、トラッキングに関するユーザーの事前同意を取得します</li>
+      <li>ユーザーがトラッキングを拒否した場合、パーソナライズされていない広告が表示されます</li>
+      <li>広告識別子はGoogle AdMobによる広告配信目的にのみ使用し、それ以外の目的には使用しません</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">未成年者の利用について</div>
+    <p>本アプリは麻雀の成績・収支管理を目的としたものであり、13歳未満のお子様を対象としておりません。当方は、13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+    <p>万が一、13歳未満のお子様に関する情報が収集されていることが判明した場合は、速やかに当該情報を削除するための措置を講じます。ただし、本アプリは個人情報を一切収集しないため、このような事態が発生する可能性は極めて低いものと考えております。</p>
+    <p>保護者の方は、未成年者による本アプリの利用に関し、適切な監督を行ってください。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">セキュリティ</div>
+    <p>本アプリは、ユーザーデータの安全性を確保するために以下の措置を講じています。</p>
+    <ul>
+      <li>すべてのデータを端末内にのみ保存し、外部サーバーへの送信を行いません</li>
+      <li>不要なネットワーク通信を一切行いません</li>
+      <li>アプリの動作に必要最小限の端末権限のみを要求します</li>
+    </ul>
+    <p>ただし、インターネット上の通信および電子的な保存方法において、100%の安全性を保証することは不可能です。当方はユーザーのデータ保護に合理的な努力を払いますが、絶対的な安全性を保証するものではありません。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">免責事項</div>
+    <p>当方は、本アプリの利用に関連して発生した以下の事項について、法令上許容される最大限の範囲で責任を負いません。</p>
+    <ul>
+      <li>アプリの不具合、障害、バグまたはエラーに起因するデータの損失・破損</li>
+      <li>端末の故障、紛失、盗難、初期化またはアンインストールに起因するデータの消失</li>
+      <li>OS（iOS、Android等）のアップデートに起因するアプリの動作不良またはデータの損失</li>
+      <li>本アプリの利用または利用不能により生じた損害（直接損害、間接損害、特別損害、結果損害、逸失利益を含みますが、これらに限りません）</li>
+      <li>外部リンク先のサービスの利用に起因する損害</li>
+    </ul>
+    <p>本アプリは「現状有姿（as is）」で提供されるものであり、当方は商品性、特定目的への適合性、権利の非侵害性その他一切の事項について、明示または黙示を問わず、いかなる保証も行いません。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">プライバシーポリシーの変更について</div>
+    <p>当方は、法令の改正、アプリの機能変更その他の事由により、本ポリシーを随時改定することがあります。改定した場合は、本ページにて改定後の最新版を公開し、最終改定日を更新します。</p>
+    <p>重要な変更（情報収集の開始、第三者提供の追加等）がある場合は、アプリ内の通知機能またはアプリストアのリリースノートにてお知らせします。</p>
+    <p>改定後も継続して本アプリをご利用いただいた場合、ユーザーは改定後のポリシーに同意したものとみなされます。改定内容にご同意いただけない場合は、本アプリの利用を中止してください。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">準拠法・管轄裁判所</div>
+    <p>本ポリシーの解釈および適用は、日本法に準拠するものとします。</p>
+    <p>本ポリシーまたは本アプリの利用に関連して紛争が生じた場合は、当方の所在地を管轄する日本の裁判所を第一審の専属的合意管轄裁判所とします。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">お問い合わせ</div>
+    <p>本ポリシーに関するご質問、ご意見、または苦情がございましたら、以下の方法でお問い合わせください。</p>
+    <div class="contact-box">
+      <p>開発者：Ryota</p>
+      <p>お問い合わせ方法：App Store／Google Playストアのレビュー欄、またはアプリ内フィードバック機能</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Ryota All Rights Reserved.
+  </footer>
+
+</div>
+</body>
+</html>
